@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Loader</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background: #16a085;
+            display: grid;
+            place-items: center;
+        }
+
+        .main {
+            width: 40vw;
+            height: calc(100vh - 50vh);
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #34495e;
+            display: grid;
+            place-items: center;
+        }
+
+        .loader {
+            width: 15rem;
+            height: 15rem;
+            background: transparent;
+            border: 1.5rem solid #000;
+            border-top: 1.5rem solid yellow;
+            border-radius: 50%;
+            animation: loader 2s linear infinite;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media(max-width: 640px) {
+            .loader {
+                width: 10rem;
+                height: 10rem;
+                border: 1.3rem solid #000;
+                border-top: 1.3rem solid yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="loader"></div>
+        </div>
+    </div>
+</body>
+
+</html>
